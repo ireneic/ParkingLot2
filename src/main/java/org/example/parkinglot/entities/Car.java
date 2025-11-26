@@ -40,4 +40,7 @@ public class Car {
         this.id = id;
     }
 
+    public String getParkingSpot() {
+        return parkingSpot;
+    }
 }

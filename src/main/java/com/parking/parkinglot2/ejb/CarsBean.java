@@ -8,6 +8,7 @@ import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
 import org.example.parkinglot.entities.Car;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -31,7 +32,16 @@ public class CarsBean {
     }
 
     private List<CarDto> copyCarsToDto(List<Car> cars) {
-        return null;
+        List<CarDto> carsDtos = new ArrayList<>();
+        if(cars == null) {
+            return carsDtos;
+        }
+
+        for (Car car : cars) {
+            CarDto dto=new CarDto(car.getId(),car.getLicensePlate(),car.getParkingSpot(), car.getOwner().getUsername());
+            carsDtos.add(dto);
+        }
+        return carsDtos;
     }
 }
 
