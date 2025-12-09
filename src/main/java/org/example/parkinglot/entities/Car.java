@@ -43,4 +43,7 @@ public class Car {
     public String getParkingSpot() {
         return parkingSpot;
     }
+
+    public void setParkingSpot(String parkingSpot) {this.parkingSpot = parkingSpot;
+    }
 }

@@ -1,5 +1,7 @@
 package com.parking.parkinglot2.common;
 
+//dto ul este un obiect care trimite date catre jsp sau frontend
+
 public class CarDto {
     Long id;
     String licensePlate;
